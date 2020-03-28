@@ -8,7 +8,7 @@ module.exports = {
 
         const incidents = await connection("incidents")
         .join('ongs', 'ongs_id', '=', 'incidents.ongs_id')
-        .limit(5)
+        // .limit(5)
         .offset((page - 1) * 5)
         .select([
             'incidents.*',
@@ -16,7 +16,7 @@ module.exports = {
             'ongs.email',
             'ongs.whatsapp',
             'ongs.city',
-            'ongs.uf'
+            'ongs.uf',
         ])
         
         response.header('X-Total-Count', count['count(*)'])
@@ -48,10 +48,6 @@ module.exports = {
         .where('id', id)
         .select('ongs_id')
         .first()
-
-        console.log("Incidents Ongs: "+ incidents.ongs_id)
-        console.log("Id: "+ ongs_id)
-        console.log("Id: "+ id)
 
 
         if(incidents.ongs_id !== ongs_id) {
