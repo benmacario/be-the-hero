@@ -1,4 +1,4 @@
-<center><img src="./img/logo@3x.png" width="250px" a="center"/><br>
+<h1 align="center"><img src="./img/logo@3x.png" width="250px"/></h1><br>
 <b align="center">Seja um verdadeiro Heroi!</b>
 </h4>
 <p>
